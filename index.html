@@ -1,0 +1,225 @@
+<!-- 0.1 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, touch-action=pan-y"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <link rel="canonical" href="http://0100.ga">
+    <title></title>
+
+    <meta name="title" content="2048"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:url" content="">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:description" content=""/>
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="./script.js?random=<?php echo rand() ?>"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74730944-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'UA-74730944-1');
+    </script>
+  <link rel="stylesheet" crossorigin href="/assets/index-U-mNJD8C.css">
+</head>
+<body>
+<a class="leaderBoard_btn">🏆</a>
+<h2 class="sc">SCORE : <span id="score">0</span></h2>
+<div id="map_wrap">
+    <div class="bg_map">
+        <!--        <ul class="tileY">-->
+        <!--            <li>-->
+        <!--                <ul class="tileX">-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                </ul>-->
+        <!--            </li>-->
+        <!--            <li>-->
+        <!--                <ul class="tileX">-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                </ul>-->
+        <!--            </li>-->
+        <!--            <li>-->
+        <!--                <ul class="tileX">-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                </ul>-->
+        <!--            </li>-->
+        <!--            <li>-->
+        <!--                <ul class="tileX">-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                    <li></li>-->
+        <!--                </ul>-->
+        <!--            </li>-->
+        <!--        </ul>-->
+    </div>
+    <div id="map">
+        <!-- <div class="tile_wrap"><div class="tile">2</div></div> -->
+    </div>
+    <div id="buttonArea">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+</div>
+<div class="bg_popup_wrap" style="display:none;">
+    <div class="leaderBoard_wrap">
+        <a href="#" class="cancle_btn">✖︎</a>
+        <ul id="leaderBoard">
+            <li>
+                <div class="bg"></div>
+                <div class="content">🏆 Leader Board 👑</div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content">🥇</div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content">🥈</div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content">🥉</div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+            <li>
+                <div class="bg"></div>
+                <div class="content"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
