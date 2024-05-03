@@ -1,3 +1,4 @@
+import axios from "axios";
 class map {
   constructor(x, y) {
     this.api = 'localhost:3000';
