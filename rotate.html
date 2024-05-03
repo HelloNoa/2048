@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>스마트폰 자이로 센서를 이용한 디바이스 컨트롤 </title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+		.data {
+			width: 90%; 
+			margin: 10px auto; 
+			background: #5DADE2; 
+			padding: 8px;
+			border-radius: 8px;
+		}
+
+		#dataContainerMotion {
+			font-size: 1.5em;
+		}
+
+		#garden{
+			position: relative;
+			width: 300px;
+			height: 300px;
+			margin: 0 auto;
+			border: 1px solid #ccc;
+		}
+		.ball {
+			position: absolute;
+			top: 100xp;
+			left: 100px;
+			width: 100px;
+			height: 100px;
+			border-radius: 100%;
+			background: #A93226;
+			text-align: center;
+			line-height: 100px;
+			color: white;
+		}
+
+	</style>
+</head>
+<body onload="init()">
+    <button id="permission"></button>
+    <span id="sensor"></span>
+
+
+    <script type="text/javascript">
+        document.getElementById('permission').onclick = ()=>{
+            if (
+                DeviceMotionEvent &&
+                typeof DeviceMotionEvent.requestPermission === "function"
+            ) {
+                DeviceMotionEvent.requestPermission();
+            }
+
+            if (window.DeviceOrientationEvent) {
+                document.getElementById('sensor').innerText='8';
+                window.addEventListener("deviceorientation", (event)=>{
+                    document.getElementById('sensor').innerText='0';
+                    // alpha: rotation around z-axis
+                    var rotateDegrees = event.alpha;
+                    // gamma: left to right
+                    var leftToRight = event.gamma;
+                    // beta: front back motion
+                    var frontToBack = event.beta;
+
+                    handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+                }, true);
+            }
+        }
+
+        var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
+            document.getElementById('sensor').innerHTML=`<br />${frontToBack} : <br />${leftToRight} : <br />${rotateDegrees}`
+        };
+	</script>
+
+</body>
+</html>
